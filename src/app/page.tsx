@@ -5,6 +5,8 @@ import { cn } from "@/lib/utils"
 import { buttonVariants } from "@/components/ui/button"
 import { Icons } from "@/components/icons"
 import { ModeToggle } from "@/components/mode-toggle"
+import DownloadButton from "@/components/download-button"
+import { Image } from "lucide-react"
 
 export default function Home() {
   return (
@@ -14,17 +16,15 @@ export default function Home() {
         <h1 className="text-4xl font-semibold sm:text-5xl md:text-6xl lg:text-7xl">
           {siteConfig.name}
         </h1>
-        <p className="max-w-[42rem] leading-normal text-muted-foreground sm:text-xl sm:leading-8">
-          {siteConfig.description}
-        </p>
-        <div className="flex gap-2">
+        <div className="flex flex-col gap-2 m-10 md:flex-row ">
           <Link
-            href={siteConfig.links.github}
+            href={siteConfig.links.image}
             target="_blank"
-            className={cn(buttonVariants({ size: "default" }))}
+            className={cn(buttonVariants({ size: "default" }), "gap-2")}
           >
-            Get Started
+            <Image />View
           </Link>
+          <DownloadButton fileUrl={siteConfig.links.image} fileName={"personPic"} />
           <ModeToggle />
         </div>
       </div>

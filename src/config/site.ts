@@ -3,7 +3,7 @@ import { SiteConfig } from "@/types"
 import { env } from "@/env.mjs"
 
 export const siteConfig: SiteConfig = {
-  name: "Next Entree",
+  name: "Image Downloader",
   author: "redpangilinan",
   description:
     "Next.js 14+ starter template with app router, shadcn/ui, typesafe env, icons and configs setup.",
@@ -13,7 +13,7 @@ export const siteConfig: SiteConfig = {
     author: "https://rdev.pro",
   },
   links: {
-    github: "https://github.com/redpangilinan/next-entree",
+    image: "https://sdbooth2-production.s3.amazonaws.com/s1s5rnxoj50uf974ytgp7pgdyedd",
   },
   ogImage: `${env.NEXT_PUBLIC_APP_URL}/og.jpg`,
 }
